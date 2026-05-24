@@ -1,0 +1,265 @@
+/* =========================================================
+   PEEBLES — hero + scroll-one mock
+   Brand canon (locked):
+     River Teal   #0C5B63   primary
+     Bridge Stone #8F6A3A   accent (CTA, links)
+     Tweed Mist   #F6F3ED   surface
+     Ink          #1F1B16   body text
+     Slate        #58524A   muted text
+     Hairline     #E4DED1   borders
+   Fonts: Fraunces (display), Inter (body).
+   ========================================================= */
+
+:root {
+  --river-teal: #0C5B63;
+  --bridge-stone: #8F6A3A;
+  --bridge-stone-hover: #6F5128;
+  --tweed-mist: #F6F3ED;
+  --ink: #1F1B16;
+  --slate: #58524A;
+  --hairline: #E4DED1;
+
+  --font-display: "Fraunces", "Georgia", "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Type scale — locked in production notes */
+  --step-hero: clamp(40px, 5.6vw, 68px);
+  --step-h2:   clamp(28px, 3.2vw, 40px);
+  --step-h3:   clamp(20px, 2.0vw, 24px);
+  --step-lead: clamp(18px, 1.6vw, 22px);
+  --step-body: 16px;
+  --step-small: 14px;
+
+  /* Layout */
+  --col-max: 1120px;
+  --col-narrow: 760px;
+  --gutter: clamp(24px, 4vw, 56px);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--tweed-mist);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--step-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: var(--bridge-stone); text-decoration: none; }
+a:hover { color: var(--bridge-stone-hover); text-decoration: underline; text-underline-offset: 3px; }
+
+/* =============== MAST =============== */
+.mast {
+  padding: 32px var(--gutter) 0;
+}
+.mast__lockup {
+  display: inline-block;
+}
+.mast__lockup img { height: 40px; width: auto; }
+
+/* =============== HERO =============== */
+.hero {
+  max-width: var(--col-max);
+  margin: 0 auto;
+  padding: clamp(64px, 10vw, 128px) var(--gutter) clamp(48px, 6vw, 72px);
+}
+
+.hero__inner {
+  max-width: 820px;  /* keeps headline at ~60–70% of column width on desktop */
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--step-small);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bridge-stone);
+  margin: 0 0 28px;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--step-hero);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--river-teal);
+  margin: 0 0 28px;
+  /* Slight optical-size bump for the display look */
+  font-variation-settings: "opsz" 96;
+  text-wrap: balance;
+}
+
+.supporting {
+  font-family: var(--font-body);
+  font-size: var(--step-lead);
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 0 0 36px;
+  max-width: 640px;
+}
+
+.cta-row { margin: 0; }
+
+.cta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--bridge-stone);
+  border-bottom: 1.5px solid var(--bridge-stone);
+  padding-bottom: 4px;
+  letter-spacing: -0.005em;
+  transition: color 120ms ease, border-color 120ms ease, transform 160ms ease;
+}
+.cta:hover {
+  color: var(--bridge-stone-hover);
+  border-bottom-color: var(--bridge-stone-hover);
+  text-decoration: none;
+}
+.cta__chev {
+  font-family: var(--font-body);
+  transition: transform 160ms ease;
+  display: inline-block;
+}
+.cta:hover .cta__chev { transform: translateX(4px); }
+
+.sub-strap {
+  max-width: var(--col-max);
+  margin: clamp(72px, 12vw, 132px) auto 0;
+  padding: 24px var(--gutter) 0;
+  border-top: 1px solid var(--hairline);
+  font-family: var(--font-body);
+  font-size: var(--step-small);
+  color: var(--slate);
+  letter-spacing: 0.005em;
+}
+
+/* =============== SCROLL ONE — SERVICES =============== */
+.services {
+  max-width: var(--col-max);
+  margin: 0 auto;
+  padding: clamp(72px, 10vw, 128px) var(--gutter) clamp(64px, 8vw, 96px);
+}
+
+.services__intro {
+  max-width: var(--col-narrow);
+  margin: 0 0 clamp(48px, 6vw, 72px);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--step-h2);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--river-teal);
+  margin: 0 0 16px;
+  font-variation-settings: "opsz" 60;
+}
+
+.section-lede {
+  font-family: var(--font-body);
+  font-size: var(--step-lead);
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0;
+  max-width: 560px;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 3.5vw, 56px);
+}
+
+.service {
+  border-top: 1px solid var(--hairline);
+  padding-top: 28px;
+}
+
+.service__name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--step-h3);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--river-teal);
+  margin: 0 0 6px;
+  font-variation-settings: "opsz" 36;
+}
+
+.service__promise {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--bridge-stone);
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+
+.service__body {
+  font-family: var(--font-body);
+  font-size: var(--step-body);
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.services__footer {
+  margin: clamp(48px, 6vw, 72px) 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline);
+  font-family: var(--font-body);
+  font-size: var(--step-small);
+  color: var(--slate);
+}
+
+/* =============== FOOT =============== */
+.foot {
+  border-top: 1px solid var(--hairline);
+  padding: 32px var(--gutter);
+  font-size: var(--step-small);
+  color: var(--slate);
+  max-width: var(--col-max);
+  margin: 0 auto;
+}
+.foot p { margin: 0; }
+.foot a { color: var(--slate); border-bottom: 1px solid var(--hairline); padding-bottom: 1px; }
+.foot a:hover { color: var(--bridge-stone); border-bottom-color: var(--bridge-stone); text-decoration: none; }
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 860px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 520px) {
+  .mast { padding-top: 20px; }
+  .mast__lockup img { height: 32px; }
+  .eyebrow { margin-bottom: 20px; font-size: 12px; }
+  .supporting { font-size: 17px; }
+}
+
+/* =============== A11Y =============== */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+:focus-visible {
+  outline: 2px solid var(--bridge-stone);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
