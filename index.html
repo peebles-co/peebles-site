@@ -12,13 +12,117 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Canonical & social -->
+  <link rel="canonical" href="https://peebles.co/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Peebles" />
+  <meta property="og:title" content="Peebles — Strategy and onchain delivery" />
+  <meta property="og:description" content="Peebles works with enterprises and crypto-native teams on the commercial models, infrastructure choices and go-to-market the next economy will actually run on." />
+  <meta property="og:url" content="https://peebles.co/" />
+  <meta property="og:image" content="https://peebles.co/assets/lockup.svg" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@wallisi" />
+  <meta name="twitter:creator" content="@wallisi" />
+  <meta name="twitter:title" content="Peebles — Strategy and onchain delivery" />
+  <meta name="twitter:description" content="Peebles works with enterprises and crypto-native teams on the commercial models, infrastructure choices and go-to-market the next economy will actually run on." />
+  <meta name="twitter:image" content="https://peebles.co/assets/lockup.svg" />
+
+  <!-- Structured data: Organization, Person, WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://peebles.co/#organization",
+        "name": "Peebles",
+        "alternateName": "Public Enterprise Ethereum Blockchain Launch and Expansion Services",
+        "url": "https://peebles.co/",
+        "logo": "https://peebles.co/assets/lockup.svg",
+        "image": "https://peebles.co/assets/lockup.svg",
+        "description": "Independent strategy and onchain delivery consultancy on tokenisation, security and go-to-market.",
+        "founder": { "@id": "https://peebles.co/#ian-wallis" },
+        "foundingDate": "2026",
+        "email": "info@peebles.co",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "GB",
+          "addressRegion": "Scotland"
+        },
+        "areaServed": "Worldwide",
+        "knowsAbout": [
+          "Tokenisation",
+          "Onchain security",
+          "Agentic commerce",
+          "Stablecoins",
+          "Go-to-market strategy",
+          "Real-world assets",
+          "DeFi",
+          "Layer 2 scaling"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/iwallis/",
+          "https://x.com/wallisi"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://peebles.co/#ian-wallis",
+        "name": "Ian Wallis",
+        "jobTitle": "Founder",
+        "description": "Founder of Peebles, an independent strategy and onchain delivery consultancy on tokenisation, security and go-to-market. Previously led business development at Consensys, taking Linea L2 past $1.3B in TVL and building the MetaMask security programme. Earlier enterprise sales leadership roles at Oracle and Pega, beginning his career at Accenture.",
+        "worksFor": { "@id": "https://peebles.co/#organization" },
+        "alumniOf": [
+          { "@type": "Organization", "name": "Consensys" },
+          { "@type": "Organization", "name": "MetaMask" },
+          { "@type": "Organization", "name": "Linea" },
+          { "@type": "Organization", "name": "Oracle" },
+          { "@type": "Organization", "name": "Pega" },
+          { "@type": "Organization", "name": "Accenture" }
+        ],
+        "knowsAbout": [
+          "Tokenisation",
+          "Onchain security",
+          "Stablecoins",
+          "Agentic commerce",
+          "Enterprise blockchain adoption",
+          "Go-to-market strategy"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Edinburgh",
+          "addressCountry": "GB",
+          "addressRegion": "Scotland"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/iwallis/",
+          "https://x.com/wallisi"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://peebles.co/#website",
+        "url": "https://peebles.co/",
+        "name": "Peebles",
+        "publisher": { "@id": "https://peebles.co/#organization" },
+        "inLanguage": "en-GB"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <!-- =============== TOP MARK =============== -->
   <header class="mast" aria-label="Peebles">
-    <a href="/" class="mast__lockup" aria-label="Peebles — home">
+    <a href="index.html" class="mast__lockup" aria-label="Peebles — home">
       <img src="assets/lockup.svg" alt="Peebles" width="173" height="40" />
+    </a>
+    <a class="mast__cta" href="mailto:info@peebles.co?subject=Hello%20Peebles">
+      Contact us
+      <span class="cta__chev" aria-hidden="true">→</span>
     </a>
   </header>
 
@@ -30,7 +134,7 @@
 
         <h1 id="hero-headline" class="headline">
           The next economy will be machine-paced.
-          An economy of machines is a new challenge all businesses face.
+          An economy of machines is a new challenge facing all businesses.
         </h1>
 
         <p class="supporting">
@@ -102,6 +206,53 @@
         Each workstream runs as a fixed-scope engagement or an ongoing
         advisory retainer.
       </p>
+    </section>
+
+    <!-- =============== ABOUT IAN WALLIS =============== -->
+    <section class="about" aria-labelledby="about-title" id="about">
+      <div class="about__inner">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title" class="section-title">Ian Wallis.</h2>
+        <p class="about__role">Founder, Peebles</p>
+
+        <div class="about__bio">
+          <p>
+            Ian Wallis is the founder of Peebles, an independent strategy
+            and onchain delivery consultancy on tokenisation, security and
+            go-to-market. He spent the previous chapter of his career at
+            Consensys, where he led business development, taking Linea L2
+            from launch to over $1.3B in TVL and built the MetaMask security
+            programme.
+          </p>
+          <p>
+            Before crypto he held enterprise sales leadership roles at
+            Oracle and Pega, and began his career as a management consultant
+            at Accenture. He writes and speaks on the decentralized models
+            the next economy will run on, and is based in Scotland.
+          </p>
+        </div>
+
+        <ul class="about__links" aria-label="Ian Wallis on social platforms">
+          <li>
+            <a class="cta" href="https://www.linkedin.com/in/iwallis/" rel="noopener me" target="_blank">
+              LinkedIn
+              <span class="cta__chev" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="cta" href="https://x.com/wallisi" rel="noopener me" target="_blank">
+              X
+              <span class="cta__chev" aria-hidden="true">→</span>
+            </a>
+          </li>
+          <li>
+            <a class="cta" href="mailto:info@peebles.co?subject=Working%20with%20Peebles">
+              Get in touch
+              <span class="cta__chev" aria-hidden="true">→</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
 

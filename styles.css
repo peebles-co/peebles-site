@@ -58,11 +58,41 @@ a:hover { color: var(--bridge-stone-hover); text-decoration: underline; text-und
 /* =============== MAST =============== */
 .mast {
   padding: 32px var(--gutter) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: var(--col-max);
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 .mast__lockup {
   display: inline-block;
 }
 .mast__lockup img { height: 40px; width: auto; }
+
+.mast__cta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.005em;
+  color: var(--bridge-stone);
+  border-bottom: 1.5px solid var(--bridge-stone);
+  padding-bottom: 3px;
+  white-space: nowrap;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.mast__cta:hover {
+  color: var(--bridge-stone-hover);
+  border-bottom-color: var(--bridge-stone-hover);
+  text-decoration: none;
+}
+.mast__cta .cta__chev { font-weight: 500; }
+.mast__cta:hover .cta__chev { transform: translateX(3px); }
 
 /* =============== HERO =============== */
 .hero {
@@ -254,6 +284,48 @@ a:hover { color: var(--bridge-stone-hover); text-decoration: underline; text-und
 .foot a { color: var(--slate); border-bottom: 1px solid var(--hairline); padding-bottom: 1px; }
 .foot a:hover { color: var(--bridge-stone); border-bottom-color: var(--bridge-stone); text-decoration: none; }
 
+/* =============== ABOUT IAN =============== */
+.about {
+  max-width: var(--col-max);
+  margin: 0 auto;
+  padding: clamp(72px, 10vw, 128px) var(--gutter) clamp(64px, 8vw, 96px);
+  border-top: 1px solid var(--hairline);
+}
+
+.about__inner {
+  max-width: var(--col-narrow);
+}
+
+.about__role {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-style: italic;
+  color: var(--bridge-stone);
+  margin: 0 0 28px;
+  line-height: 1.4;
+}
+
+.about__bio p {
+  font-family: var(--font-body);
+  font-size: var(--step-body);
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0 0 18px;
+  max-width: 640px;
+}
+.about__bio p:last-child { margin-bottom: 0; }
+
+.about__links {
+  list-style: none;
+  padding: 0;
+  margin: 36px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  align-items: baseline;
+}
+.about__links li { margin: 0; }
+
 /* =============== RESPONSIVE =============== */
 @media (max-width: 860px) {
   .services__grid {
@@ -265,6 +337,7 @@ a:hover { color: var(--bridge-stone-hover); text-decoration: underline; text-und
 @media (max-width: 520px) {
   .mast { padding-top: 20px; }
   .mast__lockup img { height: 32px; }
+  .mast__cta { font-size: 14px; }
   .eyebrow { margin-bottom: 20px; font-size: 12px; }
   .supporting { font-size: 17px; }
 }
